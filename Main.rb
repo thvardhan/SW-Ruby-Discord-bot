@@ -18,7 +18,7 @@ db.update(THREADS_TO_USE)
 
 bot = Discordrb::Commands::CommandBot.new token: BOT_TOKEN, prefix: BOT_PREFIX
 puts "Bot ready!"
-bot.command(:swc, min_args: 1, max_args: 1, description: 'Finds the info about the mon on summonerswar.co', usage: 'swc lapis') do |_event, min, max|
+bot.command(:swc, min_args: 1, max_args: 1, description: 'Finds the info about the mon on summonerswar.co', usage: 'swc lapis || swc light-serpent [use hyphen for space]') do |_event, min, max|
 
   str = _event.message.to_s
   str.sub!("#{BOT_PREFIX}swc ","")
