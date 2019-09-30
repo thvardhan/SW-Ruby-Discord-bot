@@ -15,7 +15,7 @@ BOT_PREFIX = "!" #replace with prefix
 
 puts "Starting Bot..."
 db = Database.new URL_MON_LIST
-db.update(THREADS_TO_USE) uncomment this
+db.update(THREADS_TO_USE)
 
 bot = Discordrb::Commands::CommandBot.new token: BOT_TOKEN, prefix: BOT_PREFIX
 puts "Bot ready!"
