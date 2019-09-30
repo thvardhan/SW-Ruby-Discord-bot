@@ -3,6 +3,7 @@ require 'open-uri'
 require 'nokogiri'
 require 'pry'
 load 'Mon.rb'
+load 'DBMon.rb'
 # load 'Database.rb'
 #
 # URL_MON_LIST = 'https://summonerswar.co/category/monsters/page/'
@@ -15,15 +16,12 @@ load 'Mon.rb'
 
 
 #testing file
-load 'Database.rb'
-str = "!swc lapis"
+str = "!swc emma"
 BOT_PREFIX = "!"
 
 str.sub!("#{BOT_PREFIX}swc ","")
 puts str.to_s
-db = Database.new 'URL_MON_LIST'
-link = db.link_by_name(str)
-puts link
+db = DBMon.new str
+puts db
 
 puts "fetching link"
-m = Mon.new link
